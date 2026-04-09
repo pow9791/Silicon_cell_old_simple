@@ -1,0 +1,10 @@
+.DS_Store
+.env
+.env.*
+.mplconfig/
+__pycache__/
+*.crt
+*.key
+*.p12
+*.pem
+*.pyc

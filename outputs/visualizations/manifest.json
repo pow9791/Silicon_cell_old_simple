@@ -1,0 +1,8 @@
+{
+  "whole_cell_overview": "outputs/visualizations/whole_cell_overview.png",
+  "whole_cell_trajectory_snapshots": "outputs/visualizations/whole_cell_trajectory_snapshots.png",
+  "litho_organelles": "outputs/visualizations/litho_organelles.png",
+  "cell_components_and_chemistry": "outputs/visualizations/cell_components_and_chemistry.png",
+  "metabolic_network": "outputs/visualizations/metabolic_network.png",
+  "metal_gated_channels": "outputs/visualizations/metal_gated_channels.png"
+}

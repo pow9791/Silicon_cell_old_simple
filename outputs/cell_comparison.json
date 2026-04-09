@@ -1,0 +1,140 @@
+{
+  "metallosilicon_result": {
+    "cell_class": "metallosilicon_single_cell",
+    "architecture_id": "metallosilicon_cell_1",
+    "envelope_family": "crosslinked_polysilazane",
+    "solvent": "liquid_pentasilane",
+    "top_monomer": {
+      "candidate_id": "MSA-Si5N3SFH12-i01",
+      "formula": "Si5N3SFH12",
+      "formation_energy_ev_per_atom": -3.6303,
+      "homo_lumo_gap_ev": 2.164,
+      "stability_score": 1.0
+    },
+    "top_fold": {
+      "fold_id": "SiProtein-beta_barrel-Fe-12res",
+      "fold_type": "beta_barrel",
+      "metal_center": "Fe",
+      "conductivity_s_cm": 3922.388,
+      "estimated_stability": 0.8,
+      "homo_lumo_gap_ev": 0.05
+    },
+    "metrics": {
+      "membrane_stability_index": 81.9273,
+      "information_stability_index": 69.7305,
+      "bioelectronic_transport_index": 89.8415,
+      "division_capacity_index": 61.6653,
+      "heavy_solvent_retention_index": 75.19,
+      "oxidative_tolerance_index": 6.0,
+      "prosilicon_environment_fit_index": 78.911,
+      "earthlike_environment_fit_index": 26.6654
+    },
+    "raw_outputs": {
+      "screening_score": 75.285,
+      "division_flux": 0.554988,
+      "oxygen_intrusion_probability": 0.03209,
+      "uncontrolled_leakage_probability": 0.02729,
+      "scaffold_coherence_index": 53.4315,
+      "organelle_segregation_index": 86.7035
+    }
+  },
+  "carbon_reference": {
+    "cell_class": "carbon_thermophilic_reference_cell",
+    "reference_type": "heuristic_baseline",
+    "description": "A compact water-based thermophilic prokaryote reference, used only for comparison against the speculative metallosilicon cell.",
+    "environment_preferences": {
+      "solvent": "water",
+      "oxygen": "optional but tolerated",
+      "temperature_window_k": [
+        290,
+        355
+      ]
+    },
+    "metrics": {
+      "membrane_stability_index": 87.0,
+      "information_stability_index": 93.0,
+      "bioelectronic_transport_index": 41.0,
+      "division_capacity_index": 84.0,
+      "heavy_solvent_retention_index": 7.0,
+      "oxidative_tolerance_index": 96.0,
+      "prosilicon_environment_fit_index": 15.0,
+      "earthlike_environment_fit_index": 91.0
+    },
+    "raw_outputs": {
+      "baseline_membrane": "phospholipid bilayer",
+      "baseline_genome": "DNA/RNA",
+      "baseline_energy_system": "redox enzymes + proton motive force",
+      "notes": [
+        "This baseline is not a new MD simulation.",
+        "Indices are heuristic anchors chosen to represent a robust carbon-water microbe.",
+        "The same prosilicon solvent and oxygen constraints strongly penalize this reference cell."
+      ]
+    }
+  },
+  "comparison": {
+    "comparison_rows": [
+      {
+        "metric": "membrane_stability_index",
+        "metallosilicon": 81.9273,
+        "carbon_reference": 87.0,
+        "delta_metallosilicon_minus_carbon": -5.0727,
+        "winner": "carbon_reference"
+      },
+      {
+        "metric": "information_stability_index",
+        "metallosilicon": 69.7305,
+        "carbon_reference": 93.0,
+        "delta_metallosilicon_minus_carbon": -23.2695,
+        "winner": "carbon_reference"
+      },
+      {
+        "metric": "bioelectronic_transport_index",
+        "metallosilicon": 89.8415,
+        "carbon_reference": 41.0,
+        "delta_metallosilicon_minus_carbon": 48.8415,
+        "winner": "metallosilicon"
+      },
+      {
+        "metric": "division_capacity_index",
+        "metallosilicon": 61.6653,
+        "carbon_reference": 84.0,
+        "delta_metallosilicon_minus_carbon": -22.3347,
+        "winner": "carbon_reference"
+      },
+      {
+        "metric": "heavy_solvent_retention_index",
+        "metallosilicon": 75.19,
+        "carbon_reference": 7.0,
+        "delta_metallosilicon_minus_carbon": 68.19,
+        "winner": "metallosilicon"
+      },
+      {
+        "metric": "oxidative_tolerance_index",
+        "metallosilicon": 6.0,
+        "carbon_reference": 96.0,
+        "delta_metallosilicon_minus_carbon": -90.0,
+        "winner": "carbon_reference"
+      },
+      {
+        "metric": "prosilicon_environment_fit_index",
+        "metallosilicon": 78.911,
+        "carbon_reference": 15.0,
+        "delta_metallosilicon_minus_carbon": 63.911,
+        "winner": "metallosilicon"
+      },
+      {
+        "metric": "earthlike_environment_fit_index",
+        "metallosilicon": 26.6654,
+        "carbon_reference": 91.0,
+        "delta_metallosilicon_minus_carbon": -64.3346,
+        "winner": "carbon_reference"
+      }
+    ],
+    "findings": [
+      "Metallosilicon architecture dominates in the target nonaqueous reducing environment because its envelope and redox hubs are tuned to heavy silane and sulfur-rich solvents.",
+      "Carbon baseline dominates in Earth-like water and oxygen because the metallosilicon system remains pyrophoric and hydrolytically fragile outside the target world.",
+      "Silicon-amino fold outputs materially strengthen the metallosilicon case for internal nanowire-like electron transport; the best fold reaches beta-barrel conductivity far above the carbon reference index.",
+      "The metallosilicon cell still trails the carbon reference in information stability and division capacity, mainly because scaffold coherence and whole-cell replication remain weaker than DNA/protein/water systems."
+    ]
+  }
+}
