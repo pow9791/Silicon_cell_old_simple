@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Render visualizations for the generated metallosilicon cell."""
-
+# too simplified, needs more structure
 from __future__ import annotations
 
 import json
